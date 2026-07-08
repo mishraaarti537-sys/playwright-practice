@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');//learning git
+const { test, expect } = require('@playwright/test');//GitHub Actions Test
 test('approve vendor Flow', async ({ page }) => {
     await page.goto('https://hirenova-workspace-seven.vercel.app/vendor/login');
     await page.getByRole('link',{name:'Sign up'}).click();
