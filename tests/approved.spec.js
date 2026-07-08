@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('@playwright/test');//learning git
 test('approve vendor Flow', async ({ page }) => {
     await page.goto('https://hirenova-workspace-seven.vercel.app/vendor/login');
     await page.getByRole('link',{name:'Sign up'}).click();
@@ -40,10 +40,13 @@ test('approve vendor Flow', async ({ page }) => {
   await page.getByRole('button', { name: 'Vendor Management' }).click();
   await page.getByRole('link', { name: 'Pending Approvals' }).click();
   await page.getByPlaceholder('Search Vendors...').nth(1).fill(firstName);
-  await page.waitForTimeout(3000);
   await page.getByRole('button', { name: 'Approve' }).click();
   await page.getByRole('button',{name:'Yes, Approved'}).click();
-  
+  await page.goto('https://hirenova-workspace-seven.vercel.app/vendor/login');
+  await page.getByPlaceholder('Enter Your Email').fill(email);
+  await page.getByPlaceholder('Enter Your Password').fill('Aarti.1234');
+
+  await page.getByRole('button', { name: 'LOGIN' }).click();
 
 
 });
